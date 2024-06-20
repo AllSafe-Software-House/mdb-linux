@@ -1,0 +1,23 @@
+[dt_Digital_Camera_Pictures=
+   ErrorException 
+
+  foreach() argument must be of type array|object, string given
+
+  at app/Console/Commands/ExtractDataCommand.php:42
+     38▕         // Loop through tables
+     39▕         foreach ($tables as $table) {
+     40▕             // Retrieve specific columns specified in the command line or configuration
+     41▕             $tableData = $access->getData($table);
+  ➜  42▕             foreach ($customData as $key => $value) {
+     43▕                 if ($table == $key) {
+     44▕                 // $columnsToRetrieve = $specificColumns;
+     45▕                 $customTableData = [];
+     46▕                 foreach ($tableData as $row) {
+
+  1   app/Console/Commands/ExtractDataCommand.php:42
+      Illuminate\Foundation\Bootstrap\HandleExceptions::Illuminate\Foundation\Bootstrap\{closure}()
+      [2m+12 vendor frames [22m
+
+  14  artisan:35
+      Illuminate\Foundation\Console\Kernel::handle()
+
